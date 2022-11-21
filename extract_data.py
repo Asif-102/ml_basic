@@ -1,5 +1,7 @@
 import requests
+from bs4 import BeautifulSoup
 
-r = requests.get('https://en.wikipedia.org/wiki/IPhone', auth=('user', 'pass'))
+text = requests.get('https://en.wikipedia.org/wiki/IPhone', auth=('user', 'pass')).text
+soup = BeautifulSoup(text, 'lxml')
 
-print(r.text)
+print(soup)
