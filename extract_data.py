@@ -17,4 +17,3 @@ for row in rows:
         print(price_text)
     except:
         pass
-# test
